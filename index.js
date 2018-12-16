@@ -7,8 +7,22 @@ function findMatching(drivers, name) {
 	return matches;
 }
 
-function fuzzyMatch(drivers, name){
+function fuzzyMatch(drivers, search){
 	//returns all drivers whose names begin with the provided letters.
 	//consider using some RegEx here
+
+	const searchLength = search.length;
+	const matches = drivers.filter(function(driver) {return driver.slice(0, searchLength) === search});
+
+	return matches;
+}
+
+function matchName(drivers, name) {
+
+	drivers.filter (function(driver) {return})
+	/*need to return something like this: {
+          name: 'Bobby',
+          hometown: 'Tampa Bay'
+        }*/
 
 }
